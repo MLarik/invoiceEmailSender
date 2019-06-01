@@ -21,6 +21,7 @@ public class EmailManager {
         for (Messaging.SendEmailResult res : results) {
             if (res.isSuccess()) {
                 invs[index].Is_Sent__c = true;
+                index += 1;
             }
         }
         update invs;
